@@ -41,7 +41,6 @@ const pAequorFactory = (num, arr) => {
 
       // Add that base into the strand
       this.dna[selectedIndex] = newBase;
-      // console.log(`DNA is now ${this.dna}`);
 
       return 'New strand is ' + this.dna;
     },
@@ -53,7 +52,6 @@ const pAequorFactory = (num, arr) => {
           identical += 1;
         }
       }
-      // console.log(`Count of identical items is ${identical} out of ${this.dna.length}`)
       return `Specimen #1 and specimen #2 have ${Math.round(identical / this.dna.length * 100)}% in common`
     },
     willLikelySurvive(){
@@ -93,13 +91,15 @@ const pAequorFactory = (num, arr) => {
   }
 }
 
-/////////// Check that everything is working as expected
+/////////// Tests
+
+/////////// TEST 1: Check that everything is working as expected
 // console.log(pAequor);
 // console.log(pAequor.compareDNA(['G','C','T','T','T','A','C','G','G','C','C','A','C','C','C']));
 // console.log(pAequor);
-// console.log(pAequor.willLikelySurvive())
+// console.log(pAequor.willLikelySurvive());
 
-/////////// Generate 30 specimens
+/////////// TEST 2: Generate 30 specimens
 // count = 0;
 // specimens = [];
 // while (count <= 30){
@@ -112,7 +112,7 @@ const pAequorFactory = (num, arr) => {
 
 // console.log(specimens);
 
-/////////// Complementary strands
-const pAequor = pAequorFactory(1, mockUpStrand());
-console.log(pAequor)
-console.log(pAequor.complementStrand());
+/////////// TEST 3: Complementary strands
+// const pAequor = pAequorFactory(1, mockUpStrand());
+// console.log(pAequor);
+// console.log(pAequor.complementStrand());
